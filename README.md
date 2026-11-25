@@ -1,14 +1,17 @@
-# ESMFold2 VHH and Antibody Design
+# Hotspot-Guided Antibody Design
 
-![ESMFold2-Full prediction of an IL-2 complex with the designed VHH framework in green, its CDRs in cyan, and the target hotspot in gold.](docs/assets/complex.webp)
+**Design VHHs and scFvs around a chosen epitope.** The workflow orients scaffold
+CDRs toward the target patch and checks both target and paratope contacts
+after co-folding. Active learning prioritizes candidates for evaluation,
+followed by final AbMPNN redesign. VHH presets support CDR-only or
+full-variable-domain design, with or without hotspots.
 
-**Scaffold-based VHH design with IMGT-numbered CDRs and optional target
-hotspots.** The pipeline supports CDR-only and full-variable-domain VHH
-design, plus a paired VH–VL scFv mode.
+![Two views of a predicted IL-2 VHH complex. The target surface is pale gray, the specified epitope is coral, the VHH framework is cobalt, and its CDRs are teal.](docs/assets/complex.webp)
 
-The image shows final AbMPNN redesign `mpnn_55f39b9f4051` from the IL-2
-hotspot benchmark (campaign 009, Full-model seed 50). Chain A is IL-2 and
-chain B is the designed VHH. [Predicted PDB](examples/il2/mpnn_55f39b9f4051.pdb) ·
+**Design case · IL-2 VHH.** The pictured complex is final redesign
+`mpnn_55f39b9f4051` from the hotspot benchmark (campaign 009, seed 50).
+Predicted confidence: ipSAE min **0.654**, ipTM **0.839**, VHH pLDDT **93.6**.
+[Coordinates](examples/il2/mpnn_55f39b9f4051.pdb) ·
 [PAE matrix](examples/il2/mpnn_55f39b9f4051_pae.npy)
 
 ## Workflow
@@ -105,4 +108,4 @@ python -m unittest discover -s tests -v
 - [Dunbrack Lab ipSAE](https://github.com/DunbrackLab/IPSAE)
 - [AbMPNN weights and reference](https://doi.org/10.5281/zenodo.8164693)
 - [AbNumber](https://github.com/prihoda/AbNumber) and [ANARCII](https://github.com/oxpig/ANARCII)
-- [Companion mini-protein binder design release](https://github.com/Bio-bbhe/binder-design-esmfold2)
+- [Companion hotspot-guided miniprotein design release](https://github.com/Bio-bbhe/hotspot-miniprotein-design)
