@@ -6,7 +6,7 @@ after co-folding. Active learning prioritizes candidates for evaluation,
 followed by final AbMPNN redesign. VHH presets support CDR-only or
 full-variable-domain design, with or without hotspots.
 
-![Two views of a predicted IL-2 VHH complex. The target surface is pale gray, the specified epitope is coral, the VHH framework is cobalt, and its CDRs are teal.](docs/assets/complex.webp)
+![Predicted IL-2 VHH complex with a gray target, coral epitope, cobalt VHH framework, and teal CDRs. ipSAE min 0.654, ipTM 0.839, and VHH pLDDT 93.6.](docs/assets/complex.webp)
 
 **Design case · IL-2 VHH.** The pictured complex is final redesign
 `mpnn_55f39b9f4051` from the hotspot benchmark (campaign 009, seed 50).
